@@ -4,7 +4,7 @@
 -- Purpose: Create database and create project tables 
 -- =========================================
 
-create database boAt_sales;
+create database boAt_sales;  -- Create Database
 
 use boat_sales;
 
