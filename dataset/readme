@@ -1,1 +1,25 @@
+# Dataset
 
+This project uses the **BoAt Sales Analytics Dataset** sourced from Kaggle.
+
+The dataset is used for SQL, Python, and Power BI analysis to explore sales performance, customer behavior, product performance, sales channels, and other business insights.
+
+## Dataset Source
+
+[Kaggle – BoAt Sales Analytics Dataset](https://www.kaggle.com/datasets/arjunguptadatanalyst/boat-sales-analytics-dataset-arjun-gupta?select=Customer_Details.csv)
+
+## Dataset Files
+
+* `Customer_Details.csv`
+* `Delivery_Partner_Data.csv`
+* `Product_Details.csv`
+* `Sales_Channel.csv`
+* `Sales_Data.csv`
+
+## Large File Notice
+
+`Sales_Data.csv` is approximately **185 MB** and is therefore not included directly in this GitHub repository because of GitHub's file-size limitations.
+
+The complete `Sales_Data.csv` file is kept locally and is used for the project's SQL, Python, and Power BI analysis.
+
+The remaining dataset files are included in this repository where applicable.
