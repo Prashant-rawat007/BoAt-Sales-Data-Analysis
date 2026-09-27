@@ -30,6 +30,40 @@ select
 	   ) as revenue_change_pct
 from monthly_sales;
 
+WITH monthly_sales AS (
+    SELECT
+        DATE_FORMAT(OrderDate, '%Y-%m') AS month,
+        ROUND(SUM(NetSales), 2) AS total_revenue
+    FROM Sales_Data
+    WHERE NULLIF(TRIM(CancellationReason), '') IS NULL
+      AND NULLIF(TRIM(ReturnReason), '') IS NULL
+    GROUP BY month
+)
+
+SELECT
+    month,
+    total_revenue
+FROM monthly_sales
+ORDER BY total_revenue DESC
+LIMIT 1; 
+
+WITH monthly_sales AS (
+    SELECT
+        DATE_FORMAT(OrderDate, '%Y-%m') AS month,
+        ROUND(SUM(NetSales), 2) AS total_revenue
+    FROM Sales_Data
+    WHERE NULLIF(TRIM(CancellationReason), '') IS NULL
+      AND NULLIF(TRIM(ReturnReason), '') IS NULL
+    GROUP BY month
+)
+
+SELECT
+    month,
+    total_revenue
+FROM monthly_sales
+ORDER BY total_revenue asc
+LIMIT 1;
+
 
 -- =====================================================================================================================
 -- Question 8:Which 10 products generated the highest revenue, and what percentage of total revenue did they contribute?
